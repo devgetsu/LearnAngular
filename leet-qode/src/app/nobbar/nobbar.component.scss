@@ -1,0 +1,26 @@
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+
+}
+.f-c{
+    align-items: center;
+    justify-content: center;
+}
+.f-b{
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+}
+body{
+    background-color: aliceblue;
+}
+
+select{
+    border-width: 0px;
+}
