@@ -18,9 +18,25 @@ a{
     gap:30px;
 }
 body{
-    background-color: aliceblue;
+    background-color: #282828;
+    color: #f5f3ed;
 }
 
 select{
     border-width: 0px;
+}
+.left-side{
+    margin-right: 490px;
+}
+a{
+    color: #f5f3ed;
+}
+
+select {
+    background-color: transparent;
+    border: 0px solid #282828; 
+}
+
+.left-side ul:nth-child(6){
+    width: 99px;
 }
