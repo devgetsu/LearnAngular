@@ -1,0 +1,61 @@
+ .profile-photo{
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 170px;
+    z-index: 9;
+    transform: translateY(-120px);
+ }
+
+ .achives{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 140px;
+    border-top: 1px solid black;
+    padding-top: 30px;
+    transform: translateY(-90px);
+    width: 750px;
+ }
+ .main-block{
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 60vh;
+ }
+ .main-title{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-90px);
+ }
+.container{
+    padding-top: 70px;
+}
+
+.submissions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid black;
+    padding-right: 60px;
+    border-left: 1px solid black;
+    padding-left: 60px;
+}
+.rank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.solved{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
