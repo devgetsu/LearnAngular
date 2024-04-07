@@ -5,6 +5,8 @@
 table tbody tr :nth-child(2) a{
     color:#ffffff;
 }
-table{
-    background-color: #1a1a1a;
-}
+
+
+#problems tbody tr:nth-child(even){background-color: #1a1a1a !important;}
+#problems tbody tr:nth-child(odd){background-color: #2a2a2a !important;}
+
