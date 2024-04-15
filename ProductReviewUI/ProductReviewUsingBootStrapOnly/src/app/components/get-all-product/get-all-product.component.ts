@@ -14,6 +14,7 @@ export class GetAllProductComponent implements OnInit {
   products! : PrModel[];
   
   constructor (private _crud : OnlyGetAllService) {}
+  
   ngOnInit(): void {
     this.getAllProducts();
   }
