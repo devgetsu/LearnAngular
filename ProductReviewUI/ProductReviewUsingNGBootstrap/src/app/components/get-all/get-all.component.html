@@ -1,0 +1,18 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (pr of products; track pr.id) {
+			<tr>
+				<td>{{ pr.id }}</td>
+				<td>{{ pr.name }}</td>
+				<td>{{ pr.description }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
