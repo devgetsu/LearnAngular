@@ -1,0 +1,19 @@
+
+<form>
+    
+    @if(!isSubmitted)
+    {
+        <div class="mb-3">
+            <label for="name" class="form-label">Product Name</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Akramjon" [(ngModel)]="createdProduct.name">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Product Description</label>
+            <textarea class="form-control" name="description" id="description" rows="3" [(ngModel)]="createdProduct.description" placeholder="My name is Akramjon..." ngModel required></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="myFn()">Submit</button>
+    }
+    @else {
+        <h1 id="res-txt">Muvaffaqiyatli saqlandi</h1>
+    }
+  </form>

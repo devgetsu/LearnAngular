@@ -1,5 +1,4 @@
-export interface PrView {
-    id? : number;
+export interface CrModel {
     name? : string;
     description? : string;
 }
