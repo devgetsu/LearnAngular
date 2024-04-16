@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PrModel } from '../interfaces/pr-model';
+import { CrModel } from '../interfaces/cr-model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,7 @@ export class OnlyGetAllService {
     return this.http.put<PrModel>(this.baseUrl + "/" + id, data);
   }
 
-  create(data:PrModel) : Observable<PrModel>{
+  create(data:CrModel) : Observable<PrModel>{
     return this.http.post<PrModel>(this.baseUrl, data);
   }
 }

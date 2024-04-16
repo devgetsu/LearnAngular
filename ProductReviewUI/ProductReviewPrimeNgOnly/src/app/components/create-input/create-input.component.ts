@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CrModel } from '../../interfaces/cr-model';
-import { CrudServiceService } from '../../services/crud-service.service';
+import { MsCrudService } from '../../services/ms-crud.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-createproduct',
-  templateUrl: './createproduct.component.html',
-  styleUrl: './createproduct.component.css'
+  selector: 'app-create-input',
+  templateUrl: './create-input.component.html',
+  styleUrl: './create-input.component.css'
 })
-export class CreateproductComponent {
+export class CreateInputComponent {
   createdProduct : CrModel = {
     name : "",
     description : ""
@@ -15,7 +16,7 @@ export class CreateproductComponent {
 
   isSubmitted: boolean = false;
 
-  constructor(private _crud : CrudServiceService){}
+  constructor(private _crud : MsCrudService, private router: Router){}
 
   createproduct(product:CrModel){
     this._crud.create(product).subscribe({
@@ -36,5 +37,9 @@ myFn(){
     return;
   }
   this.createproduct(this.createdProduct);
+}
+
+back(){
+  this.router.navigateByUrl('/home');
 }
 }

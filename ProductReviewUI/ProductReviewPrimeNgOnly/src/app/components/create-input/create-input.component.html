@@ -1,0 +1,22 @@
+<form>
+    @if(!isSubmitted)
+    {
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="username" name="username" [(ngModel)]="createdProduct.name" />
+            <label for="username">Name</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <textarea id="float-input" name="float-input" rows="5" cols="30" pInputTextarea  [(ngModel)]="createdProduct.description"></textarea>
+            <label for="float-input">Description</label>
+        </span>
+        <p-button type="submit" label="Submit" (click)="myFn()" severity="help"></p-button>
+    }
+    @else {
+        <p-button type="submit" label="Back" (click)="back()" severity="help"></p-button>
+        <h1 id="res-txt">Muvaffaqiyatli saqlandi</h1>
+    }
+  </form>

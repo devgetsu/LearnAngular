@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CrModel } from '../../interfaces/cr-model';
-import { CrudServiceService } from '../../services/crud-service.service';
+import { OnlyGetAllService } from '../../services/only-get-all.service';
 
 @Component({
-  selector: 'app-createproduct',
-  templateUrl: './createproduct.component.html',
-  styleUrl: './createproduct.component.css'
+  selector: 'app-cr-input',
+  templateUrl: './cr-input.component.html',
+  styleUrl: './cr-input.component.css'
 })
-export class CreateproductComponent {
+export class CrInputComponent {
   createdProduct : CrModel = {
     name : "",
     description : ""
@@ -15,7 +15,7 @@ export class CreateproductComponent {
 
   isSubmitted: boolean = false;
 
-  constructor(private _crud : CrudServiceService){}
+  constructor(private _crud : OnlyGetAllService){}
 
   createproduct(product:CrModel){
     this._crud.create(product).subscribe({

@@ -1,5 +1,4 @@
-export interface Product {
-    id?: number;
+export interface CrModel {
     name?: string;
     description?: string;
 }

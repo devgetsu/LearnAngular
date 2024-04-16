@@ -7,18 +7,24 @@ import { GetAllProductComponent } from './components/get-all-product/get-all-pro
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { EditorComponent } from './components/editor/editor.component';
+import { CrInputComponent } from './components/cr-input/cr-input.component';
+import { FormsModule } from '@angular/forms';
+import { NgComponentOutlet } from '@angular/common';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     GetAllProductComponent,
     NavbarComponent,
-    EditorComponent
+    CrInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgComponentOutlet,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

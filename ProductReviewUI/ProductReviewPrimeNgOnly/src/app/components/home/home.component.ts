@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MsCrudService } from '../../services/ms-crud.service';
 import { Product } from '../../interfaces/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent  implements OnInit{
 
   products! : Product[];
 
-  constructor (private _crud : MsCrudService) {}
+  constructor (private _crud : MsCrudService, private router : Router) {}
   
   ngOnInit(): void {
     this.getAllProds();
@@ -28,5 +29,9 @@ export class HomeComponent  implements OnInit{
       }
     })
 
+  }
+
+  redirectToCR7(){
+    this.router.navigateByUrl('/cr');
   }
 }

@@ -1,9 +1,13 @@
+
+<button class="btn btn-primary" (click)="redirectToCR7()">+</button>
+
 <table class="table">
     <thead>
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Description</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -13,8 +17,9 @@
                 <th scope="row">{{pr.id}}</th>
                 <td>{{pr.name}}</td>
                 <td>{{pr.description}}</td>
-
-                <button class="btn btn-danger" (click)="Delete(pr.id)">Delete</button>
+                <td>  
+                  <button class="btn btn-danger" (click)="Delete(pr.id!)">Delete</button>
+                </td>
             </tr>
         }
     </tbody>

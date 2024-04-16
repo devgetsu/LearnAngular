@@ -1,6 +1,8 @@
 import { PrModel } from './../../interfaces/pr-model';
 import { Component, OnInit } from '@angular/core';
 import { OnlyGetAllService } from '../../services/only-get-all.service';
+import { CrModel } from '../../interfaces/cr-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-all-product',
@@ -12,8 +14,8 @@ import { OnlyGetAllService } from '../../services/only-get-all.service';
 export class GetAllProductComponent implements OnInit {
 
   products! : PrModel[];
-  
-  constructor (private _crud : OnlyGetAllService) {}
+    
+  constructor (private _crud : OnlyGetAllService, private router: Router) {}
   
   ngOnInit(): void {
     this.getAllProducts();
@@ -34,4 +36,9 @@ export class GetAllProductComponent implements OnInit {
       this._crud.delByid(id).subscribe(result =>
         console.log(result)
         )
-      }}
+      }
+    
+    redirectToCR7(){
+      this.router.navigateByUrl('/cr');
+    }
+}

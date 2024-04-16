@@ -16,7 +16,7 @@ import { DeleteproductComponent } from './components/deleteproduct/deleteproduct
 import { GetProductByIdComponent } from './components/get-product-by-id/get-product-by-id.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MatTableModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()
