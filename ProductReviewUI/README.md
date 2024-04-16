@@ -10,3 +10,7 @@
 <h1>NG Bootstrap</h1>
 
 ![image](https://github.com/devgetsu/LearnAngular/assets/128721965/fd7dc894-df82-44ec-a0ca-5c92c5596b32)
+
+<h1>Ishlatilingin videosi</h1>
+
+https://youtu.be/YsoDSpRZer0
