@@ -7,11 +7,13 @@ import { GetAllProductComponent } from './components/get-all-product/get-all-pro
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EditorComponent } from './components/editor/editor.component';
 @NgModule({
   declarations: [
     AppComponent,
     GetAllProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,

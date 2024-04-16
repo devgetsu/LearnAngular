@@ -28,7 +28,10 @@ export class GetAllProductComponent implements OnInit {
       error: (err) => {
         console.log(err);
       }
-    })
+    })}
 
-  }
-  }
+    Delete(id:number){
+      this._crud.delByid(id).subscribe(result =>
+        console.log(result)
+        )
+      }}

@@ -13,6 +13,8 @@
                 <th scope="row">{{pr.id}}</th>
                 <td>{{pr.name}}</td>
                 <td>{{pr.description}}</td>
+
+                <button class="btn btn-danger" (click)="Delete(pr.id)">Delete</button>
             </tr>
         }
     </tbody>
