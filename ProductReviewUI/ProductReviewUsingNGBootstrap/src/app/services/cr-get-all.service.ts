@@ -10,7 +10,7 @@ import { CrModel } from '../interfaces/cr-model';
 })
 export class CrGetAllService {
 
-  mainUrl = "https://localhost:7148/api/Product"
+  mainUrl = "https://localhost:7148/api/Product/"
   constructor( private http: HttpClient) { }
 
   getAll(): Observable<any>{
@@ -19,5 +19,17 @@ export class CrGetAllService {
 
   create(data:CrModel) : Observable<PrView>{
     return this.http.post<PrView>(this.mainUrl, data);
+  }
+
+  getById(id:number) : Observable<PrView>{
+    return this.http.get<PrView>(this.mainUrl + id);
+  }
+
+  delByid(id:number) : Observable<boolean>{
+    return this.http.delete<boolean>(this.mainUrl + id);
+  }
+
+  update(id:number, data:CrModel) : Observable<PrView>{
+    return this.http.put<PrView>(this.mainUrl + id, data);
   }
 }

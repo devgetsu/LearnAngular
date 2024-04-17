@@ -11,13 +11,17 @@ import { DecimalPipe } from '@angular/common';
 import { CreateComponent } from './components/create/create.component';
 
 import { FormsModule } from '@angular/forms';
+import { GetByIdComponent } from './components/get-by-id/get-by-id.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GetAllComponent,
-    CreateComponent
+    CreateComponent,
+    GetByIdComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
