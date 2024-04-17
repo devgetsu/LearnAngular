@@ -1,1 +1,18 @@
-<p>update-product works!</p>
+<mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput [(ngModel)]="myid">
+</mat-form-field>
+
+<button class="btn btn-primary" (click)="clickedById()">Search</button>
+<br>
+<mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput value="{{user.name}}" [(ngModel)]="existProduct.name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput value="{{user.description}}" [(ngModel)]="existProduct.description" ></textarea>
+  </mat-form-field>
+<br>
+<button class="btn btn-primary" (click)="update()">Submit</button>

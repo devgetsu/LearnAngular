@@ -9,8 +9,14 @@ import { Route, Router } from '@angular/router';
 export class ProductListComponent {
 
   constructor(private crudService: CrudServiceService, private router : Router){}
-  displayedColumns: string[] = ['Id', 'name', 'description'];
+  displayedColumns: string[] = ['Id', 'name', 'description', 'action'];
   dataSource = this.crudService.getProducts();
+
+  Delete(id:number){
+    this.crudService.delByid(id).subscribe(result =>
+      console.log(result)
+      )
+    }
 
   redirectToCR7(){
     this.router.navigateByUrl('/create');

@@ -12,12 +12,12 @@ import {MatTableModule} from '@angular/material/table';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CreateproductComponent } from './components/createproduct/createproduct.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
-import { DeleteproductComponent } from './components/deleteproduct/deleteproduct.component';
 import { GetProductByIdComponent } from './components/get-product-by-id/get-product-by-id.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,6 @@ import { FormsModule } from '@angular/forms';
     ProductListComponent,
     CreateproductComponent,
     UpdateProductComponent,
-    DeleteproductComponent,
     GetProductByIdComponent
   ],
   imports: [
@@ -34,7 +33,9 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [
     provideAnimationsAsync()

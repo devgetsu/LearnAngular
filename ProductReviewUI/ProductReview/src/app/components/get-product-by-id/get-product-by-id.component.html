@@ -1,1 +1,17 @@
-<p>get-product-by-id works!</p>
+<mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput [(ngModel)]="myId">
+</mat-form-field>
+
+<button class="btn btn-primary" (click)="clickedById()">Search</button>
+
+@if(user.id == null || user.id == 0 || user.id == undefined)
+{
+    <h1>Malumot Topilmadi</h1>
+}
+@else {
+
+    <h3>id => {{user.id}}</h3>
+    <h3>name =>{{user.name}}</h3>
+    <h3>description => {{user.description}}</h3>
+}
