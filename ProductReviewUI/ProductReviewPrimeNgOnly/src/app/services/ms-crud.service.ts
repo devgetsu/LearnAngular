@@ -9,11 +9,23 @@ import { CrModel } from '../interfaces/cr-model';
 })
 export class MsCrudService {
 
-  myUrl = "https://localhost:7148/api/Product"
+  myUrl = "https://localhost:7148/api/Product/"
   constructor(private http : HttpClient) { }
 
   getAll() : Observable<any>{
     return this.http.get(this.myUrl);
+  }
+
+  getById(id:number) : Observable<Product>{
+    return this.http.get<Product>(this.myUrl + id);
+  }
+
+  delByid(id:number) : Observable<boolean>{
+    return this.http.delete<boolean>(this.myUrl + id);
+  }
+
+  update(id:number, data:CrModel) : Observable<Product>{
+    return this.http.put<Product>(this.myUrl + id, data);
   }
 
   create(data:CrModel) : Observable<Product>{

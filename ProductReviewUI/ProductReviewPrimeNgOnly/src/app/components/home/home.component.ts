@@ -31,7 +31,20 @@ export class HomeComponent  implements OnInit{
 
   }
 
+  Delete(id:number){
+    this._crud.delByid(id).subscribe(result =>
+      console.log(result)
+      )
+    }
+
   redirectToCR7(){
     this.router.navigateByUrl('/cr');
+  }
+
+  redirectToMS10(){
+    this.router.navigateByUrl('/gbi');
+  }
+  redirectToNyJR(){
+    this.router.navigateByUrl('/update');
   }
 }

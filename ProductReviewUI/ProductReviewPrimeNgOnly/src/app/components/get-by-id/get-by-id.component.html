@@ -1,0 +1,18 @@
+<span class="p-float-label">
+    <input pInputText id="username" name="username" [(ngModel)]="uuid" />
+    <label for="username">Name</label>
+</span>
+<br>
+<p-button type="submit" label="Search" (click)="clickedById()" severity="help"></p-button>
+<br>
+<br>
+<h3>id => {{user.id}}</h3>
+<h3>name =>{{user.name}}</h3>
+<h3>description => {{user.description}}</h3>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<p-button type="submit" label="Back" (click)="back()" severity="help"></p-button>

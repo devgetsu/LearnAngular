@@ -1,0 +1,25 @@
+<span class="p-float-label">
+    <input pInputText id="ssr" name="ssr" [(ngModel)]="myid" />
+    <label for="ssr">Name</label>
+</span>
+<br>
+<p-button label="Search" (click)="getById()" severity="help"></p-button>
+<br>
+<br>
+<span class="p-float-label">
+    <input pInputText id="username" name="username" value="{{user.name}}" [(ngModel)]="existProduct.name" />
+    <label for="username">Name</label>
+</span>
+<br>
+<br>
+<span class="p-float-label">
+    <textarea id="float-input" name="float-input" rows="5" cols="30" pInputTextarea value="{{user.description}}"  [(ngModel)]="existProduct.description"></textarea>
+    <label for="float-input">Description</label>
+</span>
+
+<p-button label="Update" (click)="update()" severity="help"></p-button>
+<br>
+<br>
+<br>
+<br>
+<p-button label="Back" (click)="back()" severity="help"></p-button>

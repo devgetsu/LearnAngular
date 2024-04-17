@@ -14,11 +14,15 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { GetByIdComponent } from './components/get-by-id/get-by-id.component';
+import { UpdateComponent } from './components/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CreateInputComponent
+    CreateInputComponent,
+    GetByIdComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
