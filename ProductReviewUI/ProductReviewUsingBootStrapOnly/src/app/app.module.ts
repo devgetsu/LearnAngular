@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CrInputComponent } from './components/cr-input/cr-input.component';
 import { FormsModule } from '@angular/forms';
 import { NgComponentOutlet } from '@angular/common';
+import { GetByIdComponent } from './components/get-by-id/get-by-id.component';
+import { UpdateComponent } from './components/update/update.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { NgComponentOutlet } from '@angular/common';
     GetAllProductComponent,
     NavbarComponent,
     CrInputComponent,
+    GetByIdComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,

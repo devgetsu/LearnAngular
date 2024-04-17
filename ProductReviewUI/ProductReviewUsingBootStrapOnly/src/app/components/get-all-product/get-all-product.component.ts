@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { OnlyGetAllService } from '../../services/only-get-all.service';
 import { CrModel } from '../../interfaces/cr-model';
 import { Router } from '@angular/router';
+import { __param } from 'tslib';
 
 @Component({
   selector: 'app-get-all-product',
@@ -37,7 +38,9 @@ export class GetAllProductComponent implements OnInit {
         console.log(result)
         )
       }
-    
+    Update(id:number){
+      this.router.navigateByUrl('/up');
+    }
     redirectToCR7(){
       this.router.navigateByUrl('/cr');
     }

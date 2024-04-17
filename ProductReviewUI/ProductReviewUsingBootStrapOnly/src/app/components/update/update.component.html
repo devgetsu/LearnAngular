@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="myid">
+<button type="submit" (click)="clickedById()">Search</button>
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Product Name</label>
+        <input type="text" name="name" class="form-control" id="name" value="{{user.name}}" [(ngModel)]="existProduct.name">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Product Description</label>
+        <textarea class="form-control" name="description" id="description" rows="3" value="{{user.description}}" [(ngModel)]="existProduct.description" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="update()">Submit</button>
+  </form>
