@@ -21,6 +21,7 @@ import {MatRadioModule} from '@angular/material/radio';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatOption } from '@angular/material/core';
+import { TranslocoRootModule } from './transloco-root.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { MatOption } from '@angular/material/core';
     ReactiveFormsModule,
     RouterLink,
     MatOption,
-    MatRadioModule
+    MatRadioModule,
+    TranslocoRootModule
   ],
   providers: [
     provideAnimationsAsync()

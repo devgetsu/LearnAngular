@@ -15,7 +15,7 @@ export class AuthService {
 
   constructor(private http: HttpClient,private router : Router) { }
   apiUrl = environment.apiUrl;
-  tokenKey: string = 'token';
+  tokenKey: string = 'accessToken';
 
   login(data: Login): Observable<LoginResponse>{
     return this.http.post<LoginResponse>(`${this.apiUrl}Auth/Login`, data).pipe(
@@ -40,5 +40,11 @@ export class AuthService {
         return response
       })
     );
+
+}
+
+logout()
+{
+  localStorage.setItem(this.tokenKey,'');
 }
 }
